@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="900.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.StaffOthersController">
+    <children>
+        <AnchorPane fx:id="anchoePane1" layoutX="-6.0" prefHeight="900.0" prefWidth="243.0" style="-fx-background-color: #4bcffa;">
+            <children>
+                <Button fx:id="logoutbtn" layoutX="51.0" layoutY="825.0" mnemonicParsing="false" onAction="#logoutbtnOnAction" prefHeight="24.0" prefWidth="97.0" style="-fx-background-color: #4bcffa;" text="Log Out">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="customerbtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="228.0" mnemonicParsing="false" onAction="#customerbtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Customer Manage">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="itembtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="286.0" mnemonicParsing="false" onAction="#itembtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Item Manage">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="staffbtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="344.0" mnemonicParsing="false" onAction="#staffbtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Staff &amp; Others">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="shedulebtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="402.0" mnemonicParsing="false" onAction="#shedulebtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Shedule">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="reservationbtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="460.0" mnemonicParsing="false" onAction="#reservationbtnOnACtion" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Reservation">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+            <ImageView fitHeight="218.0" fitWidth="209.0" layoutX="19.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Desktop/Project/Images/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="191.0" fitWidth="203.0" layoutX="26.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/logo.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+        <AnchorPane fx:id="anchorPane2" layoutX="313.0" layoutY="33.0" prefHeight="58.0" prefWidth="907.0" style="-fx-background-color: #4bcffa; -fx-background-radius: 20;">
+            <children>
+                <Label layoutX="293.0" layoutY="6.0" prefHeight="46.0" prefWidth="282.0" text="Staff &amp; Others Manage Form">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="19.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="46.0" fitWidth="75.0" layoutX="157.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true" />
+            </children></AnchorPane>
+        <Button layoutX="1151.0" layoutY="825.0" mnemonicParsing="false" onAction="#backOnAction" prefHeight="36.0" prefWidth="97.0" style="-fx-background-color: #4bcffa;" text="Back">
+            <font>
+                <Font name="DejaVuMathTeXGyre-Regular" size="13.0" />
+            </font>
+        </Button>
+      <AnchorPane layoutX="365.0" layoutY="137.0" prefHeight="309.0" prefWidth="346.0" style="-fx-background-color: #fff9c4; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="instructorbtn" layoutX="75.0" layoutY="16.0" mnemonicParsing="false" onAction="#instructorbtnOnAction" prefHeight="58.0" prefWidth="197.0" style="-fx-background-radius: 20; -fx-background-color: #fff9c4;" styleClass="-fx-button-radius: 50;" text="Instructors">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="22.0" />
+               </font></Button>
+            <ImageView fitHeight="218.0" fitWidth="258.0" layoutX="64.0" layoutY="84.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/instructor.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="818.0" layoutY="137.0" prefHeight="309.0" prefWidth="346.0" style="-fx-background-color: #e1bee7; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="employeeBtn" layoutX="75.0" layoutY="14.0" mnemonicParsing="false" onAction="#employeeBtnOnAction" prefHeight="58.0" prefWidth="197.0" style="-fx-background-radius: 20; -fx-background-color: #e1bee7;" styleClass="-fx-button-radius: 50;" text="Employee">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="22.0" />
+               </font></Button>
+            <ImageView fitHeight="218.0" fitWidth="218.0" layoutX="75.0" layoutY="85.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/Task-bro.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="818.0" layoutY="483.0" prefHeight="309.0" prefWidth="346.0" style="-fx-background-color: #EBE3D5; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="driverbtn" layoutX="81.0" layoutY="26.0" mnemonicParsing="false" onAction="#driverbtnOnAction" prefHeight="58.0" prefWidth="197.0" style="-fx-background-radius: 20; -fx-background-color: #EBE3D5; -fx-alignment: center;" styleClass="-fx-button-radius: 50;" text="Drivers">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="22.0" />
+               </font></Button>
+            <ImageView fitHeight="218.0" fitWidth="240.0" layoutX="81.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/driver.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="365.0" layoutY="483.0" prefHeight="309.0" prefWidth="346.0" style="-fx-background-color: #FFC5C5; -fx-background-radius: 20;">
+         <children>
+            <Button fx:id="boatsbtn" layoutX="75.0" layoutY="14.0" mnemonicParsing="false" onAction="#boatsbtnOnAction" prefHeight="58.0" prefWidth="197.0" style="-fx-background-radius: 20; -fx-background-color: #FFC5C5;" styleClass="-fx-button-radius: 50;" text="Boats">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="22.0" />
+               </font></Button>
+            <ImageView fitHeight="228.0" fitWidth="243.0" layoutX="66.0" layoutY="81.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/boat.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+    </children>
+
+</AnchorPane>

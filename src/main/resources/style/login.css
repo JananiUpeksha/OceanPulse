@@ -1,0 +1,11 @@
+#anchorPane1{
+    -fx-background-radius: 50;
+    -fx-background-image: url('/home/janani/IdeaProjects/OceanPulse/src/main/resources/icon/ocean-background-vector.jpg');
+-fx-background-size: cover;
+-fx-background-repeat: no-repeat;
+-fx-background-position: center;
+}
+
+#rootNode{
+    -fx-background-color: linear-gradient(to bottom, #9cecfb, #65c7f7, #0052d4);
+}

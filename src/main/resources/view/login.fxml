@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="593.0" prefWidth="859.0" style="-fx-background-color: #0abde3;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.LoginController">
+   <children>
+      <ImageView fitHeight="613.0" fitWidth="867.0">
+         <image>
+            <Image url="@../icon/login.png" />
+         </image>
+      </ImageView>
+      <AnchorPane layoutX="423.0" layoutY="37.0" prefHeight="422.0" prefWidth="394.0" style="-fx-background-color: white; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="103.0" layoutY="28.0" prefHeight="39.0" prefWidth="221.0" text="WelCome Back" textFill="DODGERBLUE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="24.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtUserName" layoutX="90.0" layoutY="151.0" prefHeight="45.0" prefWidth="273.0" promptText="User Name" style="-fx-background-radius: 20;">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+               </font>
+            </TextField>
+            <TextField fx:id="txtPassword" layoutX="90.0" layoutY="207.0" prefHeight="45.0" prefWidth="273.0" promptText="Password" style="-fx-background-radius: 20;">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+               </font>
+            </TextField>
+            <Button layoutX="140.0" layoutY="346.0" mnemonicParsing="false" onAction="#loginOnAcion" prefHeight="33.0" prefWidth="126.0" style="-fx-background-radius: 20; -fx-background-color: #1e90ff;" text="Sign In" textFill="WHITE">
+               <font>
+                  <Font name="DejaVu Serif Bold" size="14.0" />
+               </font>
+            </Button>
+            <ImageView fitHeight="45.0" fitWidth="47.0" layoutX="28.0" layoutY="151.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/log1.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="51.0" fitWidth="51.0" layoutX="25.0" layoutY="204.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/log2.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="246.0" layoutY="255.0" mnemonicParsing="false" onAction="#passwordOnAction" style="-fx-background-color: white;" text="FogetPassword">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="12.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootNode" prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #e3f2fd;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lk.ijse.controller.SheduleController">
+
+    <children>
+        <AnchorPane layoutX="-6.0" prefHeight="900.0" prefWidth="266.0" style="-fx-background-color: #4bcffa;">
+            <children>
+                <Button fx:id="logoutbtn" layoutX="65.0" layoutY="841.0" mnemonicParsing="false" onAction="#logoutbtnOnAction" prefHeight="24.0" prefWidth="97.0" style="-fx-background-color: #4bcffa;" text="Log Out">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="13.0" />
+                    </font>
+                </Button>
+                <Button fx:id="customerbtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="228.0" mnemonicParsing="false" onAction="#customerbtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Customer Manage">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="itembtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="286.0" mnemonicParsing="false" onAction="#itembtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Item Manage">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="staffbtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="344.0" mnemonicParsing="false" onAction="#staffbtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Staff &amp; Others">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="shedulebtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="402.0" mnemonicParsing="false" onAction="#shedulebtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Shedule">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+                <Button fx:id="reservationbtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="460.0" mnemonicParsing="false" onAction="#reservationbtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="Reservation">
+                    <font>
+                        <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+                    </font>
+                    <effect>
+                        <Blend />
+                    </effect>
+                </Button>
+            <ImageView fitHeight="203.0" fitWidth="222.0" layoutX="32.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../../Desktop/Project/Images/logo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="dashboardbtn" alignment="BOTTOM_LEFT" layoutX="3.0" layoutY="518.0" mnemonicParsing="false" onAction="#dashboardbtnOnAction" prefHeight="58.0" prefWidth="240.0" style="-fx-background-color: #4bcffa;" text="DashBoard">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="15.0" />
+               </font>
+               <effect>
+                  <Blend />
+               </effect>
+            </Button>
+            <ImageView fitHeight="185.0" fitWidth="204.0" layoutX="41.0" layoutY="32.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icon/logo.png" />
+               </image>
+            </ImageView>
+            </children>
+        </AnchorPane>
+      <TextField fx:id="txtScheduleId" layoutX="304.0" layoutY="112.0" prefHeight="39.0" prefWidth="240.0" promptText="Schedule ID">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtDate" layoutX="573.0" layoutY="112.0" prefHeight="39.0" prefWidth="455.0" promptText="YYYY-MM-DD                     Time HH-MM-SS">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </TextField>
+      <ComboBox fx:id="comboInsId" layoutX="457.0" layoutY="181.0" onAction="#comboInsIdOnAction" prefHeight="39.0" prefWidth="204.0" />
+      <ComboBox fx:id="comboBoatId" layoutX="457.0" layoutY="236.0" onAction="#comboBoatIdOnACtion" prefHeight="39.0" prefWidth="204.0" />
+      <TextField fx:id="txtInsName" layoutX="716.0" layoutY="181.0" prefHeight="39.0" prefWidth="240.0" promptText="Name">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtBoatCapacity" layoutX="716.0" layoutY="236.0" prefHeight="39.0" prefWidth="240.0" promptText="Capacity">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtInsQualidication" layoutX="1011.0" layoutY="181.0" prefHeight="39.0" prefWidth="240.0" promptText="Qualification">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtStatus" layoutX="1011.0" layoutY="236.0" prefHeight="39.0" prefWidth="240.0" promptText="Status">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </TextField>
+      <TableView fx:id="tblSchedule" layoutX="304.0" layoutY="379.0" prefHeight="435.0" prefWidth="947.0">
+        <columns>
+          <TableColumn fx:id="colId" prefWidth="155.0" text="Schedule ID" />
+            <TableColumn fx:id="colDateTime" prefWidth="366.0" text="Date &amp; Time" />
+            <TableColumn fx:id="colBoatId" prefWidth="226.0" text="Boat ID" />
+            <TableColumn fx:id="colInsId" prefWidth="215.0" text="Instructor ID" />
+            <TableColumn minWidth="2.0" prefWidth="2.0" />
+        </columns>
+      </TableView>
+      <Label layoutX="304.0" layoutY="181.0" prefHeight="39.0" prefWidth="136.0" text="Instructor ID :">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="304.0" layoutY="236.0" prefHeight="39.0" prefWidth="136.0" text="Boat ID;">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="1147.0" layoutY="112.0" mnemonicParsing="false" onAction="#btnSaveOnACtion" prefHeight="39.0" prefWidth="97.0" style="-fx-background-color: #4bcffa;" text="Save">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Button>
+      <Button layoutX="1154.0" layoutY="828.0" mnemonicParsing="false" onAction="#btnAddOnAction" prefHeight="39.0" prefWidth="97.0" style="-fx-background-color: #4bcffa;" text="Back">
+         <font>
+            <Font name="DejaVuMathTeXGyre-Regular" size="14.0" />
+         </font>
+      </Button>
+      <AnchorPane layoutX="286.0" layoutY="21.0" prefHeight="58.0" prefWidth="977.0" style="-fx-background-color: #4bcffa; -fx-background-radius: 20;">
+         <children>
+            <Label layoutX="369.0" layoutY="6.0" prefHeight="47.0" prefWidth="240.0" text="Schedule Form">
+               <font>
+                  <Font name="DejaVuMathTeXGyre-Regular" size="28.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <ImageView fitHeight="58.0" fitWidth="325.0" layoutX="336.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="325.0" layoutX="650.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/2.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="58.0" fitWidth="253.0" layoutX="975.0" layoutY="321.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../icon/3.png" />
+         </image>
+      </ImageView>
+    </children>
+
+
+</AnchorPane>

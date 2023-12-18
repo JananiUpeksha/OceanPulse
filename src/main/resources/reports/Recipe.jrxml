@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Recipe" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="a1af672f-6b64-459a-b23a-c3c419ec5449">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+    o.o_id,
+    o.c_id,
+    c.name AS customer_name,
+    c.address AS customer_address,
+    omd.i_id,
+    i.name AS item_name,
+    i.size AS item_size
+FROM
+    orders o
+JOIN
+    order_manage_details omd ON o.o_id = omd.o_id
+JOIN
+    customer c ON o.c_id = c.c_id
+JOIN
+    item i ON omd.i_id = i.i_id;]]>
+	</queryString>
+	<field name="o_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="o_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="o_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="c_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="c_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="c_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="orders"/>
+	</field>
+	<field name="customer_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="customer_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="customer_address" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="address"/>
+		<property name="com.jaspersoft.studio.field.label" value="customer_address"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="customer"/>
+	</field>
+	<field name="i_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="i_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="i_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="order_manage_details"/>
+	</field>
+	<field name="item_name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="item_name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="item_size" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="size"/>
+		<property name="com.jaspersoft.studio.field.label" value="item_size"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="83" splitType="Stretch">
+			<staticText>
+				<reportElement x="110" y="10" width="283" height="30" uuid="afedbf88-b24f-4d7c-b138-009a38251d79"/>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="16"/>
+				</textElement>
+				<text><![CDATA[Customer Reservation Details]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="97" y="33" width="263" height="1" uuid="6bdd409a-fb24-466d-9e72-9913a472b353"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="400" y="0" width="100" height="30" uuid="8a4618af-e246-4a57-8c4e-e2561e672450"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="513" y="0" width="53" height="30" uuid="70b2576b-b458-4766-8efb-e0c9780eca1b"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="-4" y="0" width="44" height="30" uuid="15949318-e6ec-46ef-826c-d0c63a55becd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="101f410b-abf6-4286-a3a9-20d4f7a3e5c1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[o_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="60" y="0" width="40" height="30" uuid="df31d5ac-1679-4df8-a808-c5af72ca31a3">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4c0f0bfe-f109-4f54-a47b-176d68479586"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[c_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="150" y="0" width="77" height="30" uuid="1d7e845d-98f0-411f-a7ad-00a3df8743dd">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1d8bfcaa-c6be-44ec-9168-a5a71e364133"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="264" y="0" width="73" height="30" uuid="ea31b69e-9623-40c3-b3a4-430a7a459405">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c3b28947-b91c-43d3-8e49-94499f0c3d40"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[Address]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="360" y="0" width="62" height="30" uuid="ef0e9b26-0ade-440d-9ca8-26cf43601cf8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf976802-ed03-4af3-b1d4-4e9a2db3486f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[I_Id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="430" y="0" width="67" height="30" uuid="dcbd271b-aecc-4ded-b52c-eab4bd34188d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="16a8419c-2b69-412e-9cbc-48eb374c7c5b"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[Name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="506" y="0" width="60" height="30" uuid="b65b4927-94ff-40db-bbc4-67d6c51a8511">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2c27b2ad-de01-4013-830b-4e42efb9a12e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[Size]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="52" splitType="Stretch">
+			<textField>
+				<reportElement x="-4" y="9" width="54" height="30" uuid="c3862486-a669-4577-b260-ef62982f4370">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="101f410b-abf6-4286-a3a9-20d4f7a3e5c1"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{o_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="59" y="8" width="51" height="30" uuid="87177c66-27ed-4942-b34a-3ece719da2f1">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4c0f0bfe-f109-4f54-a47b-176d68479586"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{c_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="123" y="8" width="117" height="30" uuid="c889b69c-dc7a-4d5c-9650-5a6f3f086f9b">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1d8bfcaa-c6be-44ec-9168-a5a71e364133"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="11" width="100" height="30" uuid="179929d2-1c3f-419c-bf39-710fb3d99d25">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c3b28947-b91c-43d3-8e49-94499f0c3d40"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{customer_address}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="11" width="62" height="30" uuid="874b0518-f0a6-4282-84d7-e63a444119e9">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="bf976802-ed03-4af3-b1d4-4e9a2db3486f"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{i_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="430" y="9" width="67" height="30" uuid="11caf363-2204-4601-8624-1d2c7599d957">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="16a8419c-2b69-412e-9cbc-48eb374c7c5b"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="510" y="11" width="52" height="30" uuid="80dc9abc-7020-48a4-9c50-2372146df938">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2c27b2ad-de01-4013-830b-4e42efb9a12e"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{item_size}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

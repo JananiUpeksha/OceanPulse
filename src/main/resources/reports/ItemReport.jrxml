@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.20.6.final using JasperReports Library version 6.20.6-5c96b6aa8a39ac1dc6b6bea4b81168e16dd39231  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ItemReport" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f1c9f3b9-d21c-4ce3-a5b2-50280695a428">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="DataAdapter.jrdax"/>
+	<queryString language="SQL">
+		<![CDATA[select * from item;]]>
+	</queryString>
+	<field name="i_id" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="i_id"/>
+		<property name="com.jaspersoft.studio.field.label" value="i_id"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="name"/>
+		<property name="com.jaspersoft.studio.field.label" value="name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="brand" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="brand"/>
+		<property name="com.jaspersoft.studio.field.label" value="brand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="size" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="size"/>
+		<property name="com.jaspersoft.studio.field.label" value="size"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="price" class="java.lang.Double">
+		<property name="com.jaspersoft.studio.field.name" value="price"/>
+		<property name="com.jaspersoft.studio.field.label" value="price"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<field name="qtyOnHand" class="java.lang.Integer">
+		<property name="com.jaspersoft.studio.field.name" value="qtyOnHand"/>
+		<property name="com.jaspersoft.studio.field.label" value="qtyOnHand"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="item"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="74" splitType="Stretch">
+			<staticText>
+				<reportElement x="205" y="24" width="205" height="30" uuid="98a894af-a527-4ea4-9096-89f3d0c8198f"/>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="18"/>
+				</textElement>
+				<text><![CDATA[Item Details Report]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="180" y="51" width="230" height="1" uuid="8fdcf14d-96f1-4641-8765-41e2d29e7670"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="38" y="0" width="75" height="30" uuid="2b52713d-0bcc-4890-92c5-36da89e1b667">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="164db1bd-5079-455f-8018-9b8beb281b48"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[i_id]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="127" y="0" width="77" height="30" uuid="2b89a0e4-a037-4cf9-a6e7-fdd25bb4d457">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4aaf6bcc-56c7-4fcc-9599-5a6686cd41e7"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[name]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="229" y="0" width="73" height="30" uuid="f1a24e99-eef6-49c0-9395-1c5b094fcd3d">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e935916-f5f4-492e-9831-6e696b9c8b92"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[brand]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="330" y="0" width="50" height="30" uuid="14a27484-8a62-4de9-97e7-99f3a0299134">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="934c66ba-3014-47aa-89ec-2390f54a9f7d"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[size]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="420" y="0" width="40" height="30" uuid="3bf837a9-3cd9-4361-a31c-0c93f85b3d31">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1859b7fe-6752-424f-8846-65e3e1f58546"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[price]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="480" y="0" width="90" height="30" uuid="e5177628-fab1-45ca-ae20-5381f64b97a0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63f423c3-c0cc-4034-8fd2-f1a44feb99ef"/>
+				</reportElement>
+				<textElement>
+					<font fontName="DejaVu Math TeX Gyre" size="14"/>
+				</textElement>
+				<text><![CDATA[qtyOnHand]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="44" splitType="Stretch">
+			<textField>
+				<reportElement x="38" y="0" width="70" height="30" uuid="5de8b5ef-d04b-4200-9d78-7ac0cb9dc7f7">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="164db1bd-5079-455f-8018-9b8beb281b48"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{i_id}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="130" y="0" width="70" height="30" uuid="4009575a-661f-4886-8e6b-eb8992b68e85">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="4aaf6bcc-56c7-4fcc-9599-5a6686cd41e7"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="230" y="0" width="70" height="30" uuid="7c6b8c30-225c-4540-840b-ff1fac654df0">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="5e935916-f5f4-492e-9831-6e696b9c8b92"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{brand}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="330" y="0" width="60" height="30" uuid="feb12d8b-89d9-4d6d-b529-51b35d45d022">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="934c66ba-3014-47aa-89ec-2390f54a9f7d"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{size}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="420" y="0" width="60" height="30" uuid="9180c44c-f053-4441-866b-9dca17b74c1c">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="1859b7fe-6752-424f-8846-65e3e1f58546"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="500" y="0" width="60" height="30" uuid="7b160edf-affc-4d28-a067-2a31829a77e8">
+					<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="63f423c3-c0cc-4034-8fd2-f1a44feb99ef"/>
+				</reportElement>
+				<textFieldExpression><![CDATA[$F{qtyOnHand}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
